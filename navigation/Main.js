@@ -18,6 +18,7 @@ import InsaatHesaplari from "../screens/InsaatHesaplari";
 import SaglikHesaplamalari from "../screens/SaglikHesaplamalari";
 import MatematikHesaplari from "../screens/MatematikHesaplari";
 import IstatistikHesaplamalari from "../screens/IstatistikHesaplamalari";
+import Hakkimizda from "../screens/Hakkimizda";
 
 //altscreens -> Birim Dönüştürücüler
 import EnerjiBirimCevirici from "../BirimDonusturucuScreens/EnerjiBirimCevirici";
@@ -84,279 +85,279 @@ import AsmaTavanHesaplama from "../InsaatHesaplariScreens/AsmaTavanHesaplama";
 import GazbetonDuvarHesaplama from "../InsaatHesaplariScreens/GazbetonDuvarHesaplama";
 import ParkeMaliyetHesaplama from "../InsaatHesaplariScreens/ParkeMaliyetHesaplama";
 
-
 const Stack = createStackNavigator();
 const Drawer = createDrawerNavigator();
 
 const Screens = ({ navigation }) => {
   return (
-      <Stack.Navigator
-        screenOptions={{
-          headerTransparent: true,
-          headerTitle: null,
-          headerLeft: () => (
-            <Button transparent onPress={() => navigation.openDrawer()}>
-              <Feather
-                name="menu"
-                size={18}
-                color="black"
-                style={{ paddingHorizontal: 10 }}
-              />
-            </Button>
-          ),
-        }}
-      >
-
-        {/* Ana Screens */}
-
-        <Stack.Screen name="BirimDonusturucu">
-          {(props) => <BirimDonusturucu {...props} />}
-        </Stack.Screen>
-
-        <Stack.Screen name="FinansHesaplamalari">
-          {(props) => <FinansHesaplamalari {...props} />}
-        </Stack.Screen>
-
-        <Stack.Screen name="FizikHesaplamalari">
-          {(props) => <FizikHesaplamalari {...props} />}
-        </Stack.Screen>
-
-        <Stack.Screen name="InsaatHesaplari">
-          {(props) => <InsaatHesaplari {...props} />}
-        </Stack.Screen>
-
-        <Stack.Screen name="SaglikHesaplamalari">
-          {(props) => <SaglikHesaplamalari {...props} />}
-        </Stack.Screen>
-
-        <Stack.Screen name="MatematikHesaplari">
-          {(props) => <MatematikHesaplari {...props} />}
-        </Stack.Screen>
-
-        <Stack.Screen name="IstatistikHesaplamalari">
-          {(props) => <IstatistikHesaplamalari {...props} />}
-        </Stack.Screen>
-
-        {/* Birim Dönüştürücüler */}
-
-        <Stack.Screen name="EnerjiBirimCevirici">
-          {(props) => <EnerjiBirimCevirici {...props} />}
-        </Stack.Screen>
+    <Stack.Navigator
+      screenOptions={{
+        headerTransparent: true,
+        headerTitle: null,
+        headerLeft: () => (
+          <Button transparent onPress={() => navigation.openDrawer()}>
+            <Feather
+              name="menu"
+              size={18}
+              color="black"
+              style={{ paddingHorizontal: 10 }}
+            />
+          </Button>
+        ),
+      }}
+    >
+      {/* Ana Screens */}
+
+      <Stack.Screen name="BirimDonusturucu">
+        {(props) => <BirimDonusturucu {...props} />}
+      </Stack.Screen>
+
+      <Stack.Screen name="FinansHesaplamalari">
+        {(props) => <FinansHesaplamalari {...props} />}
+      </Stack.Screen>
+
+      <Stack.Screen name="FizikHesaplamalari">
+        {(props) => <FizikHesaplamalari {...props} />}
+      </Stack.Screen>
+
+      <Stack.Screen name="InsaatHesaplari">
+        {(props) => <InsaatHesaplari {...props} />}
+      </Stack.Screen>
+
+      <Stack.Screen name="SaglikHesaplamalari">
+        {(props) => <SaglikHesaplamalari {...props} />}
+      </Stack.Screen>
+
+      <Stack.Screen name="MatematikHesaplari">
+        {(props) => <MatematikHesaplari {...props} />}
+      </Stack.Screen>
+
+      <Stack.Screen name="IstatistikHesaplamalari">
+        {(props) => <IstatistikHesaplamalari {...props} />}
+      </Stack.Screen>
+
+      <Stack.Screen name="Hakkimizda">
+        {(props) => <Hakkimizda {...props} />}
+      </Stack.Screen>
+
+      {/* Birim Dönüştürücüler */}
+
+      <Stack.Screen name="EnerjiBirimCevirici">
+        {(props) => <EnerjiBirimCevirici {...props} />}
+      </Stack.Screen>
+
+      <Stack.Screen name="SicaklikBirimCevirici">
+        {(props) => <SicaklikBirimCevirici {...props} />}
+      </Stack.Screen>
+
+      <Stack.Screen name="ZamanBirimCevirici">
+        {(props) => <ZamanBirimCevirici {...props} />}
+      </Stack.Screen>
+
+      <Stack.Screen name="UzunlukBirimCevirici">
+        {(props) => <UzunlukBirimCevirici {...props} />}
+      </Stack.Screen>
+
+      <Stack.Screen name="AlanBirimCevirici">
+        {(props) => <AlanBirimCevirici {...props} />}
+      </Stack.Screen>
+
+      <Stack.Screen name="HizBirimCevirici">
+        {(props) => <HizBirimCevirici {...props} />}
+      </Stack.Screen>
+
+      <Stack.Screen name="BasincBirimCevirici">
+        {(props) => <BasincBirimCevirici {...props} />}
+      </Stack.Screen>
+
+      <Stack.Screen name="AgirlikBirimCevirici">
+        {(props) => <AgirlikBirimCevirici {...props} />}
+      </Stack.Screen>
+
+      <Stack.Screen name="KuvvetBirimCevirici">
+        {(props) => <KuvvetBirimCevirici {...props} />}
+      </Stack.Screen>
+
+      {/* Finans Hesaplamaları */}
+
+      <Stack.Screen name="FaizVergiKarHesaplama">
+        {(props) => <FaizVergiKarHesaplama {...props} />}
+      </Stack.Screen>
+
+      <Stack.Screen name="KrediHesaplari">
+        {(props) => <KrediHesaplari {...props} />}
+      </Stack.Screen>
+
+      <Stack.Screen name="AylikFaizHesaplama">
+        {(props) => <AylikFaizHesaplama {...props} />}
+      </Stack.Screen>
 
-        <Stack.Screen name="SicaklikBirimCevirici">
-          {(props) => <SicaklikBirimCevirici {...props} />}
-        </Stack.Screen>
+      <Stack.Screen name="NetKarMarji">
+        {(props) => <NetKarMarji {...props} />}
+      </Stack.Screen>
 
-        <Stack.Screen name="ZamanBirimCevirici">
-          {(props) => <ZamanBirimCevirici {...props} />}
-        </Stack.Screen>
+      <Stack.Screen name="GelecekDegerHesaplama">
+        {(props) => <GelecekDegerHesaplama {...props} />}
+      </Stack.Screen>
 
-        <Stack.Screen name="UzunlukBirimCevirici">
-          {(props) => <UzunlukBirimCevirici {...props} />}
-        </Stack.Screen>
+      <Stack.Screen name="YatirimSermayeGetirisi">
+        {(props) => <YatirimSermayeGetirisi {...props} />}
+      </Stack.Screen>
 
-        <Stack.Screen name="AlanBirimCevirici">
-          {(props) => <AlanBirimCevirici {...props} />}
-        </Stack.Screen>
+      {/* Fizik Hesaplamaları */}
 
-        <Stack.Screen name="HizBirimCevirici">
-          {(props) => <HizBirimCevirici {...props} />}
-        </Stack.Screen>
+      <Stack.Screen name="KinetikEnerjiHesaplama">
+        {(props) => <KinetikEnerjiHesaplama {...props} />}
+      </Stack.Screen>
 
-        <Stack.Screen name="BasincBirimCevirici">
-          {(props) => <BasincBirimCevirici {...props} />}
-        </Stack.Screen>
+      <Stack.Screen name="PotansiyelEnerjiHesaplama">
+        {(props) => <PotansiyelEnerjiHesaplama {...props} />}
+      </Stack.Screen>
 
-        <Stack.Screen name="AgirlikBirimCevirici">
-          {(props) => <AgirlikBirimCevirici {...props} />}
-        </Stack.Screen>
+      <Stack.Screen name="YogunlukHesaplama">
+        {(props) => <YogunlukHesaplama {...props} />}
+      </Stack.Screen>
 
-        <Stack.Screen name="KuvvetBirimCevirici">
-          {(props) => <KuvvetBirimCevirici {...props} />}
-        </Stack.Screen>
+      <Stack.Screen name="TorkHesaplama">
+        {(props) => <TorkHesaplama {...props} />}
+      </Stack.Screen>
 
-        {/* Finans Hesaplamaları */}
+      <Stack.Screen name="SesHiziHesaplama">
+        {(props) => <SesHiziHesaplama {...props} />}
+      </Stack.Screen>
 
-        <Stack.Screen name="FaizVergiKarHesaplama">
-          {(props) => <FaizVergiKarHesaplama {...props} />}
-        </Stack.Screen>
+      <Stack.Screen name="OrtalamaHizHesaplama">
+        {(props) => <OrtalamaHizHesaplama {...props} />}
+      </Stack.Screen>
 
-        <Stack.Screen name="KrediHesaplari">
-          {(props) => <KrediHesaplari {...props} />}
-        </Stack.Screen>
+      <Stack.Screen name="BasincHesaplama">
+        {(props) => <BasincHesaplama {...props} />}
+      </Stack.Screen>
 
-        <Stack.Screen name="AylikFaizHesaplama">
-          {(props) => <AylikFaizHesaplama {...props} />}
-        </Stack.Screen>
+      <Stack.Screen name="HookeYasasiHesaplama">
+        {(props) => <HookeYasasiHesaplama {...props} />}
+      </Stack.Screen>
 
-        <Stack.Screen name="NetKarMarji">
-          {(props) => <NetKarMarji {...props} />}
-        </Stack.Screen>
+      <Stack.Screen name="KiloHesaplama">
+        {(props) => <KiloHesaplama {...props} />}
+      </Stack.Screen>
 
-        <Stack.Screen name="GelecekDegerHesaplama">
-          {(props) => <GelecekDegerHesaplama {...props} />}
-        </Stack.Screen>
+      {/* Sağlık Hesaplamaları */}
 
-        <Stack.Screen name="YatirimSermayeGetirisi">
-          {(props) => <YatirimSermayeGetirisi {...props} />}
-        </Stack.Screen>
+      <Stack.Screen name="VucutKitleEndeksi">
+        {(props) => <VucutKitleEndeksi {...props} />}
+      </Stack.Screen>
 
+      <Stack.Screen name="GunlukSuIhtiyaci">
+        {(props) => <GunlukSuIhtiyaci {...props} />}
+      </Stack.Screen>
 
-        {/* Fizik Hesaplamaları */}
+      <Stack.Screen name="BazalMetabolizmaHizi">
+        {(props) => <BazalMetabolizmaHizi {...props} />}
+      </Stack.Screen>
 
-        <Stack.Screen name="KinetikEnerjiHesaplama">
-          {(props) => <KinetikEnerjiHesaplama {...props} />}
-        </Stack.Screen>
+      <Stack.Screen name="SigaraMaliyetHesaplama">
+        {(props) => <SigaraMaliyetHesaplama {...props} />}
+      </Stack.Screen>
 
-        <Stack.Screen name="PotansiyelEnerjiHesaplama">
-          {(props) => <PotansiyelEnerjiHesaplama {...props} />}
-        </Stack.Screen>
+      <Stack.Screen name="KanHacmiHesaplama">
+        {(props) => <KanHacmiHesaplama {...props} />}
+      </Stack.Screen>
 
-        <Stack.Screen name="YogunlukHesaplama">
-          {(props) => <YogunlukHesaplama {...props} />}
-        </Stack.Screen>
+      <Stack.Screen name="IdealKiloHesaplama">
+        {(props) => <IdealKiloHesaplama {...props} />}
+      </Stack.Screen>
 
-        <Stack.Screen name="TorkHesaplama">
-          {(props) => <TorkHesaplama {...props} />}
-        </Stack.Screen>
+      {/* İstatistik Hesaplamaları */}
 
-        <Stack.Screen name="SesHiziHesaplama">
-          {(props) => <SesHiziHesaplama {...props} />}
-        </Stack.Screen>
+      <Stack.Screen name="BinomDagilimHesaplama">
+        {(props) => <BinomDagilimHesaplama {...props} />}
+      </Stack.Screen>
 
-        <Stack.Screen name="OrtalamaHizHesaplama">
-          {(props) => <OrtalamaHizHesaplama {...props} />}
-        </Stack.Screen>
+      <Stack.Screen name="GeometrikDagilimHesaplama">
+        {(props) => <GeometrikDagilimHesaplama {...props} />}
+      </Stack.Screen>
 
-        <Stack.Screen name="BasincHesaplama">
-          {(props) => <BasincHesaplama {...props} />}
-        </Stack.Screen>
+      <Stack.Screen name="PermutasyonHesaplama">
+        {(props) => <PermutasyonHesaplama {...props} />}
+      </Stack.Screen>
 
-        <Stack.Screen name="HookeYasasiHesaplama">
-          {(props) => <HookeYasasiHesaplama {...props} />}
-        </Stack.Screen>
+      <Stack.Screen name="KombinasyonHesaplama">
+        {(props) => <KombinasyonHesaplama {...props} />}
+      </Stack.Screen>
 
-        <Stack.Screen name="KiloHesaplama">
-          {(props) => <KiloHesaplama {...props} />}
-        </Stack.Screen>
+      <Stack.Screen name="IhtimalHesaplama">
+        {(props) => <IhtimalHesaplama {...props} />}
+      </Stack.Screen>
 
-        {/* Sağlık Hesaplamaları */}
+      {/* Matematik Hesaplamaları */}
 
-        <Stack.Screen name="VucutKitleEndeksi">
-          {(props) => <VucutKitleEndeksi {...props} />}
-        </Stack.Screen>
+      <Stack.Screen name="DaireAlanCevreHesaplama">
+        {(props) => <DaireAlanCevreHesaplama {...props} />}
+      </Stack.Screen>
 
-        <Stack.Screen name="GunlukSuIhtiyaci">
-          {(props) => <GunlukSuIhtiyaci {...props} />}
-        </Stack.Screen>
+      <Stack.Screen name="DikdortgenAlanCevreHesaplama">
+        {(props) => <DikdortgenAlanCevreHesaplama {...props} />}
+      </Stack.Screen>
 
-        <Stack.Screen name="BazalMetabolizmaHizi">
-          {(props) => <BazalMetabolizmaHizi {...props} />}
-        </Stack.Screen>
+      <Stack.Screen name="FaktoriyelHesaplama">
+        {(props) => <FaktoriyelHesaplama {...props} />}
+      </Stack.Screen>
 
-        <Stack.Screen name="SigaraMaliyetHesaplama">
-          {(props) => <SigaraMaliyetHesaplama {...props} />}
-        </Stack.Screen>
+      <Stack.Screen name="HataYuzdesiHesaplama">
+        {(props) => <HataYuzdesiHesaplama {...props} />}
+      </Stack.Screen>
 
-        <Stack.Screen name="KanHacmiHesaplama">
-          {(props) => <KanHacmiHesaplama {...props} />}
-        </Stack.Screen>
+      <Stack.Screen name="KarekokHesaplama">
+        {(props) => <KarekokHesaplama {...props} />}
+      </Stack.Screen>
 
-        <Stack.Screen name="IdealKiloHesaplama">
-          {(props) => <IdealKiloHesaplama {...props} />}
-        </Stack.Screen>
+      <Stack.Screen name="LogaritmaHesaplama">
+        {(props) => <LogaritmaHesaplama {...props} />}
+      </Stack.Screen>
 
-        {/* İstatistik Hesaplamaları */}
+      <Stack.Screen name="UcgenAlaniHesaplama">
+        {(props) => <UcgenAlaniHesaplama {...props} />}
+      </Stack.Screen>
 
-        <Stack.Screen name="BinomDagilimHesaplama">
-          {(props) => <BinomDagilimHesaplama {...props} />}
-        </Stack.Screen>
+      <Stack.Screen name="UsHesaplama">
+        {(props) => <UsHesaplama {...props} />}
+      </Stack.Screen>
 
-        <Stack.Screen name="GeometrikDagilimHesaplama">
-          {(props) => <GeometrikDagilimHesaplama {...props} />}
-        </Stack.Screen>
+      <Stack.Screen name="YuzdeHesaplama">
+        {(props) => <YuzdeHesaplama {...props} />}
+      </Stack.Screen>
 
-        <Stack.Screen name="PermutasyonHesaplama">
-          {(props) => <PermutasyonHesaplama {...props} />}
-        </Stack.Screen>
+      {/* İnşaat Hesaplamaları */}
 
-        <Stack.Screen name="KombinasyonHesaplama">
-          {(props) => <KombinasyonHesaplama {...props} />}
-        </Stack.Screen>
+      <Stack.Screen name="BoslukHacmiHesaplama">
+        {(props) => <BoslukHacmiHesaplama {...props} />}
+      </Stack.Screen>
 
-        <Stack.Screen name="IhtimalHesaplama">
-          {(props) => <IhtimalHesaplama {...props} />}
-        </Stack.Screen>
+      <Stack.Screen name="SuMuhtevasiHesaplama">
+        {(props) => <SuMuhtevasiHesaplama {...props} />}
+      </Stack.Screen>
 
-        {/* Matematik Hesaplamaları */}
+      <Stack.Screen name="MutlakBasincHesaplama">
+        {(props) => <MutlakBasincHesaplama {...props} />}
+      </Stack.Screen>
 
-        <Stack.Screen name="DaireAlanCevreHesaplama">
-          {(props) => <DaireAlanCevreHesaplama {...props} />}
-        </Stack.Screen>
+      <Stack.Screen name="KinematikVizkoziteHesaplama">
+        {(props) => <KinematikVizkoziteHesaplama {...props} />}
+      </Stack.Screen>
 
-        <Stack.Screen name="DikdortgenAlanCevreHesaplama">
-          {(props) => <DikdortgenAlanCevreHesaplama {...props} />}
-        </Stack.Screen>
+      <Stack.Screen name="AsmaTavanHesaplama">
+        {(props) => <AsmaTavanHesaplama {...props} />}
+      </Stack.Screen>
 
-        <Stack.Screen name="FaktoriyelHesaplama">
-          {(props) => <FaktoriyelHesaplama {...props} />}
-        </Stack.Screen>
+      <Stack.Screen name="GazbetonDuvarHesaplama">
+        {(props) => <GazbetonDuvarHesaplama {...props} />}
+      </Stack.Screen>
 
-        <Stack.Screen name="HataYuzdesiHesaplama">
-          {(props) => <HataYuzdesiHesaplama {...props} />}
-        </Stack.Screen>
-
-        <Stack.Screen name="KarekokHesaplama">
-          {(props) => <KarekokHesaplama {...props} />}
-        </Stack.Screen>
-
-        <Stack.Screen name="LogaritmaHesaplama">
-          {(props) => <LogaritmaHesaplama {...props} />}
-        </Stack.Screen>
-
-        <Stack.Screen name="UcgenAlaniHesaplama">
-          {(props) => <UcgenAlaniHesaplama {...props} />}
-        </Stack.Screen>
-
-        <Stack.Screen name="UsHesaplama">
-          {(props) => <UsHesaplama {...props} />}
-        </Stack.Screen>
-
-        <Stack.Screen name="YuzdeHesaplama">
-          {(props) => <YuzdeHesaplama {...props} />}
-        </Stack.Screen>
-
-        {/* İnşaat Hesaplamaları */}
-
-        <Stack.Screen name="BoslukHacmiHesaplama">
-          {(props) => <BoslukHacmiHesaplama {...props} />}
-        </Stack.Screen>
-
-        <Stack.Screen name="SuMuhtevasiHesaplama">
-          {(props) => <SuMuhtevasiHesaplama {...props} />}
-        </Stack.Screen>
-
-        <Stack.Screen name="MutlakBasincHesaplama">
-          {(props) => <MutlakBasincHesaplama {...props} />}
-        </Stack.Screen>
-
-        <Stack.Screen name="KinematikVizkoziteHesaplama">
-          {(props) => <KinematikVizkoziteHesaplama {...props} />}
-        </Stack.Screen>
-
-        <Stack.Screen name="AsmaTavanHesaplama">
-          {(props) => <AsmaTavanHesaplama {...props} />}
-        </Stack.Screen>
-
-        <Stack.Screen name="GazbetonDuvarHesaplama">
-          {(props) => <GazbetonDuvarHesaplama {...props} />}
-        </Stack.Screen>
-
-        <Stack.Screen name="ParkeMaliyetHesaplama">
-          {(props) => <ParkeMaliyetHesaplama {...props} />}
-        </Stack.Screen>
-
-      </Stack.Navigator>
+      <Stack.Screen name="ParkeMaliyetHesaplama">
+        {(props) => <ParkeMaliyetHesaplama {...props} />}
+      </Stack.Screen>
+    </Stack.Navigator>
   );
 };
 
@@ -415,6 +416,12 @@ const DrawerContent = (props) => {
             label="İstatistik Alanındaki Hesaplamalar"
             labelStyle={styles.drawerLabel}
             onPress={() => props.navigation.navigate("IstatistikHesaplamalari")}
+          />
+
+          <DrawerItem
+            label="Hakkımızda"
+            labelStyle={styles.drawerLabel}
+            onPress={() => props.navigation.navigate("Hakkimizda")}
           />
         </Block>
       </Block>
